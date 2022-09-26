@@ -8,7 +8,7 @@ import ConvertDate from "./convertDate";
 type Props = {
   title: string;
   subtitle: string;
-  publish: string;
+  publish?: string;
 };
 
 const PostHeader = ({ title, subtitle, publish = "" }: Props) => {

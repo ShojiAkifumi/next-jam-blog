@@ -8,10 +8,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
-  prevText: string;
-  prevUrl: string;
-  nextText: string;
-  nextUrl: string;
+  prevText?: string;
+  prevUrl?: string;
+  nextText?: string;
+  nextUrl?: string;
 };
 
 const Pagination = ({ prevText, prevUrl, nextText, nextUrl }: Props) => {

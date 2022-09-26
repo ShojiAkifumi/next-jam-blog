@@ -1,8 +1,10 @@
 import { createClient } from "microcms-js-sdk";
 
 export const client = createClient({
-  serviceDomain: process.env.SERVICE_DOMAIN || "",
-  apiKey: process.env.API_KEY || "",
+  serviceDomain:
+    process.env.SERVICE_DOMAIN ||
+    "↑ここにはmicroCMSさんのサービスドメインを入れるのだ",
+  apiKey: process.env.API_KEY || "←ここにはmicroCMSさんのAPIキーを入れるのだ",
 });
 
 export async function getPostBySlug(slug: string) {
@@ -27,6 +29,49 @@ export async function getAllSlugs(limit = 100) {
     return slugs.contents;
   } catch (err) {
     console.log("-- getAllSlugs --");
+    console.log(err);
+  }
+}
+
+export async function getAllPosts(limit = 100) {
+  try {
+    const posts = await client.get({
+      endpoint: "blogs",
+      queries: { fields: "title,slug,eyecatch", orders: "-publishDate", limit },
+    });
+    return posts.contents;
+  } catch (err) {
+    console.log("-- getAllPosts --");
+    console.log(err);
+  }
+}
+export async function getAllCategories(limit = 100) {
+  try {
+    const categories = await client.get({
+      endpoint: "categories",
+      queries: { fields: "name,id,slug", limit },
+    });
+    return categories.contents;
+  } catch (err) {
+    console.log("-- getAllCategories --");
+    console.log(err);
+  }
+}
+
+export async function getAllPostsByCategory(catID: string, limit = 100) {
+  try {
+    const categories = await client.get({
+      endpoint: "blogs",
+      queries: {
+        filters: `categories[contains]${catID}`,
+        fields: "title,slug,eyecatch",
+        orders: "-publishDate",
+        limit,
+      },
+    });
+    return categories.contents;
+  } catch (err) {
+    console.log("-- getAllPostsByCategory --");
     console.log(err);
   }
 }

@@ -16,6 +16,14 @@ import { getPlaiceholder } from "plaiceholder";
 import { prevNextPost } from "lib/prev-next-post";
 import Pagination from "components/pagination";
 
+interface IParams extends ParsedUrlQuery {
+  slug: string;
+}
+
+type slugProp = {
+  slug: string;
+};
+
 type eyecatchTypes = {
   url: string;
   width: string;
@@ -56,6 +64,7 @@ const Post = ({
         <PostHeader title={title} subtitle="blog Article" publish={publish} />
         <figure>
           <Image
+            key={eyecatch.url}
             src={eyecatch.url}
             alt={title}
             layout="responsive"
@@ -86,14 +95,6 @@ const Post = ({
       </article>
     </Container>
   );
-};
-
-interface IParams extends ParsedUrlQuery {
-  slug: string;
-}
-
-type slugProp = {
-  slug: string;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

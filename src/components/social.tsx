@@ -4,7 +4,7 @@ import styles from "styles/social.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
-  faFacebookF,
+  // faFacebookF,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -17,19 +17,27 @@ const Social = ({ iconSize }: Props) => {
   return (
     <ul className={styles.list} style={iconSizeStyle}>
       <li>
-        <a href="https://twitter.com">
+        <a
+          href="https://twitter.com/akimasamichi41"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FontAwesomeIcon icon={faTwitter} />
           <span className="sr-only">Twitter</span>
         </a>
       </li>
-      <li>
+      {/* <li>
         <a href="https://www.facebook.com">
           <FontAwesomeIcon icon={faFacebookF} />
           <span className="sr-only">Facebook</span>
         </a>
-      </li>
+      </li> */}
       <li>
-        <a href="https://github.com">
+        <a
+          href="https://github.com/ShojiAkifumi"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FontAwesomeIcon icon={faGithub} />
           <span className="sr-only">GitHub</span>
         </a>
