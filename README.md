@@ -1,6 +1,6 @@
 これは、[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages) でブートストラップされた [Next.js](https://nextjs.org/) プロジェクトです。 /create-next-app)。
 
-＃＃ 入門
+## 入門
 
 まず、開発サーバーを実行します。
 
@@ -18,7 +18,7 @@ yarn dev
 
 `pages/api` ディレクトリは `/api/*` にマップされます。このディレクトリ内のファイルは、React ページではなく [API ルート](https://nextjs.org/docs/api-routes/introduction) として扱われます。
 
-＃＃ もっと詳しく知る
+## もっと詳しく知る
 
 Next.js の詳細については、次のリソースをご覧ください。
 
