@@ -154,6 +154,11 @@
   dependencies:
     "tslib" "^2.4.0"
 
+"@types/gtag.js@^0.0.11":
+  "integrity" "sha512-rUuSDedDjcuUpoc2zf6eX6zRrxqALNgwrmMBfVFopkLH7YGM52C7tt6j9GsYIvaxn+ioVRpOKoHnN1DXzHEqIg=="
+  "resolved" "https://registry.npmjs.org/@types/gtag.js/-/gtag.js-0.0.11.tgz"
+  "version" "0.0.11"
+
 "@types/html-to-text@^8.1.1":
   "integrity" "sha512-QFcqfc7TiVbvIX8Fc2kWUxakruI1Ay6uitaGCYHzI5M0WHQROV5D2XeSaVrK0FmvssivXum4yERVnJsiuH61Ww=="
   "resolved" "https://registry.npmjs.org/@types/html-to-text/-/html-to-text-8.1.1.tgz"
