@@ -32,17 +32,17 @@ const Nav = () => {
       </button>
       <ul className={styles.list}>
         <li>
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <a onClick={closeNav}>Home</a>
           </Link>
         </li>
         <li>
-          <Link href="/about">
+          <Link href="/about" scroll={false}>
             <a onClick={closeNav}>About</a>
           </Link>
         </li>
         <li>
-          <Link href="/blog">
+          <Link href="/blog" scroll={false}>
             <a onClick={closeNav}>Blog</a>
           </Link>
         </li>

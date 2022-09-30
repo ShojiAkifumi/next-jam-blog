@@ -18,7 +18,7 @@ const PostCategories = ({ categories }: Props) => {
       <ul className={styles.list}>
         {categories.map(({ name, slug }) => (
           <li key={slug}>
-            <Link href={`/blog/category/${slug}`}>
+            <Link href={`/blog/category/${slug}`} scroll={false}>
               <a>{name}</a>
             </Link>
           </li>
