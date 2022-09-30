@@ -1,14 +1,32 @@
 .flexContainer {
   composes: spaceBetween from "styles/utils.module.scss";
-  margin: var(--space-lg) 0;
+  margin: 15px 0;
   gap: 1em;
   .next {
     margin-left: auto;
+  }
+
+  li a {
+    padding: 24px 32px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #ddd;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .iconText {
     display: flex;
     align-items: center;
     gap: 0.5em;
+  }
+}
+@media (max-width: 767px) {
+  .flexContainer {
+    flex-direction: column;
+    li {
+      width: 100%;
+    }
   }
 }

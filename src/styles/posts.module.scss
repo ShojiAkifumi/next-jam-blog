@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-jump);
-  margin-top: var(--space-xs);
+  margin-top: var(--space-md);
   margin-bottom: var(--space-lg);
 }
 .post {
@@ -14,5 +14,9 @@
   figure {
     position: relative;
     aspect-ratio: 16/9;
+  }
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
   }
 }

@@ -1,3 +1,7 @@
+.siteHeader {
+  box-shadow: 0 0 4px #dddd;
+}
+
 .flexContainer {
   composes: spaceBetween from "styles/utils.module.scss";
 }

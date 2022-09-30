@@ -11,4 +11,8 @@
   background-color: var(--gray-75);
   color: var(--white);
   font-size: var(--small-heading2);
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
 }

@@ -61,23 +61,27 @@ const Post = ({
     <Container>
       <HeadMeta pageTitle={title} pageDesc={description} pageImg={eyecatch} />
       <article>
-        <PostHeader title={title} subtitle="blog Article" publish={publish} />
-        <figure>
-          <Image
-            key={eyecatch.url}
-            src={eyecatch.url}
-            alt={title}
-            layout="responsive"
-            width={eyecatch.width}
-            height={eyecatch.height}
-            sizes="(min-width: 1152px) 1152px, 100vw"
-            priority
-            placeholder="blur"
-            blurDataURL={eyecatch.plaiceholder}
-          />
-        </figure>
         <TwoColumn>
           <TwoColumn.main>
+            <PostHeader
+              title={title}
+              subtitle="blog Article"
+              publish={publish}
+            />
+            <figure>
+              <Image
+                key={eyecatch.url}
+                src={eyecatch.url}
+                alt={title}
+                layout="responsive"
+                width={eyecatch.width}
+                height={eyecatch.height}
+                sizes="(min-width: 1152px) 1152px, 100vw"
+                priority
+                placeholder="blur"
+                blurDataURL={eyecatch.plaiceholder}
+              />
+            </figure>
             <PostBody>
               <ConvertBody contentHTNL={content} />
             </PostBody>

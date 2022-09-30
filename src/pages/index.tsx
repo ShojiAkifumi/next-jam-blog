@@ -29,7 +29,7 @@ const Home = ({ posts }: postsProps) => {
       <HeadMeta />
       <Hero title="CUBE" subtitle="アウトプットしていくサイト" imageOn />
       <Posts posts={posts} />
-      <Pagination nextUrl="/blog" nextText="More Posts" />
+      <Pagination nextUrl="/blog" nextText="もっと見る" />
     </Container>
   );
 };
