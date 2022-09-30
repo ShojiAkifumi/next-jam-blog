@@ -27,7 +27,6 @@ export const event = ({ action, category, label, value = "" }: Event) => {
   });
 };
 
-// _app.tsx で読み込む
 export const usePageView = () => {
   const router = useRouter();
 
@@ -47,11 +46,11 @@ export const usePageView = () => {
   }, [router.events]);
 };
 
-// _app.tsx で読み込む
 export const GoogleAnalytics = () => (
   <>
     {existsGaId && (
       <>
+        {console.log(GA_ID)}
         <Script
           defer
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
