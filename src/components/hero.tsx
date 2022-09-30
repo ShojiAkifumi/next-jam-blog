@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import styles from "styles/hero.module.css";
+import styles from "styles/hero.module.scss";
 import cube from "../../public/cube.jpg";
 
 type Props = {

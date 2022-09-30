@@ -1,5 +1,5 @@
 .flexContainer {
-  composes: sideBySide from './utils.module.css';
+  composes: sideBySide from "./utils.module.scss";
   gap: var(--space-md);
   margin: var(--space-md) 0 var(--space-lg);
 }
@@ -8,22 +8,19 @@
   .main {
     width: 768px;
   }
-
   .sidebar {
     width: 240px;
     position: sticky;
     top: 40px;
     align-self: flex-start;
-  }
-
-  .sidebar * {
-    text-align: right;
-  }
-
-  .sidebar :is(div, ul) {
-    width: fit-content;
-    margin-left: auto;
-    place-items: flex-end;
-    place-content: flex-end;
+    * {
+      text-align: right;
+    }
+    :is(div, ul) {
+      width: fit-content;
+      margin-left: auto;
+      place-items: flex-end;
+      place-content: flex-end;
+    }
   }
 }

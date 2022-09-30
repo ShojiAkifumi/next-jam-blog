@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "styles/contact.module.css";
+import styles from "styles/contact.module.scss";
 import Social from "./social";
 
 const Contact = () => {
@@ -7,7 +7,7 @@ const Contact = () => {
     <div className={styles.stack}>
       <h3 className={styles.heading}>Contact</h3>
       <Social iconSize="24px" />
-      <address>cube@web.mail.address</address>
+      <address>kuonnrh48951@outlook.jp</address>
     </div>
   );
 };

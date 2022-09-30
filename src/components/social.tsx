@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "styles/social.module.css";
+import styles from "styles/social.module.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

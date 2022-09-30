@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import styles from "styles/logo.module.css";
+import styles from "styles/logo.module.scss";
 
 type logoProps = {
   boxOn?: boolean;

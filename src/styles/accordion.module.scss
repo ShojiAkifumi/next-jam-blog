@@ -1,0 +1,49 @@
+/* 見出し */
+.heading {
+  font-size: var(--body);
+  button {
+    all: unset;
+    outline: revert;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+}
+
+/* 見出しのアイコン */
+.icon {
+  color: var(--gray-25);
+  font-size: 1.25em;
+  transition: transform 0.2s;
+}
+
+/* テキスト */
+.text {
+  overflow: hidden;
+  height: 0px;
+  .textInner {
+    padding: 0 1.14em 1.14em;
+    font-size: calc(var(--body) * 0.875);
+  }
+}
+
+.open {
+  border: solid 1px var(--gray-25);
+  .text {
+    height: 100%;
+  }
+  .open .icon {
+    transform: rotate(180deg);
+  }
+}
+.close {
+  border: solid 1px var(--gray-25);
+  .text {
+    height: 0;
+  }
+}

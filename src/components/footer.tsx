@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "./logo";
-import styles from "styles/footer.module.css";
+import styles from "styles/footer.module.scss";
 import Container from "./container";
 import Social from "./social";
 

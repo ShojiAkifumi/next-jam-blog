@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "styles/posts.module.css";
+import styles from "styles/posts.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -23,7 +23,7 @@ const Posts = ({ posts }: postsProps) => {
     <div className={styles.gridContainer}>
       {posts.map(({ title, slug, eyecatch }) => (
         <article className={styles.post} key={slug}>
-          <Link href={`/blog/${slug}`}>
+          <Link href={`/blog/${slug}`} scroll={false}>
             <a>
               <figure>
                 <Image

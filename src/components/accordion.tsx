@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import styles from "styles/accordion.module.css";
+import styles from "styles/accordion.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 type Props = {

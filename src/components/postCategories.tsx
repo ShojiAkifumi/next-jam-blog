@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "styles/post-categories.module.css";
+import styles from "styles/post-categories.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolderOpen } from "@fortawesome/free-regular-svg-icons";
 import Link from "next/link";

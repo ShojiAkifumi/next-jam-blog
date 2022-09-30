@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "styles/post-header.module.css";
+import styles from "styles/post-header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import ConvertDate from "./convertDate";
