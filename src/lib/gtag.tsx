@@ -50,7 +50,6 @@ export const GoogleAnalytics = () => (
   <>
     {existsGaId && (
       <>
-        {console.log(GA_ID)}
         <Script
           defer
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
