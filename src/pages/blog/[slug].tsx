@@ -58,7 +58,7 @@ const Post = ({
   nextPost,
 }: Props) => {
   return (
-    <Container>
+    <Container isMain>
       <HeadMeta pageTitle={title} pageDesc={description} pageImg={eyecatch} />
       <article>
         <TwoColumn>

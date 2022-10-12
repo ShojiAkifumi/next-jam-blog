@@ -11,7 +11,7 @@ import Accordion from "components/accordion";
 
 const About = () => {
   return (
-    <Container>
+    <Container isMain>
       <HeadMeta
         pageTitle="アバウト"
         pageDesc="アウトプットしていくサイト"

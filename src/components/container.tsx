@@ -5,19 +5,27 @@ import { motion } from "framer-motion";
 type Props = {
   children: React.ReactNode;
   large?: boolean;
+  isMain?: boolean;
 };
 
-const Container = ({ children, large = false }: Props) => {
+const Container = ({ children, large = false, isMain = false }: Props) => {
   return (
-    <motion.div
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 40 }}
-      transition={{
-        duration: 0.6,
-      }}
-    >
-      <div className={large ? styles.large : styles.default}>{children}</div>
-    </motion.div>
+    <div className={large ? styles.large : styles.default}>
+      {isMain ? (
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 40 }}
+          transition={{
+            duration: 0.6,
+          }}
+        >
+          {children}
+        </motion.div>
+      ) : (
+        <>{children}</>
+      )}
+    </div>
   );
 };
 

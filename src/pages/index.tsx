@@ -25,7 +25,7 @@ type postsProps = {
 
 const Home = ({ posts }: postsProps) => {
   return (
-    <Container>
+    <Container isMain>
       <HeadMeta />
       <Hero title="CUBE" subtitle="アウトプットしていくサイト" imageOn />
       <Posts posts={posts} />
