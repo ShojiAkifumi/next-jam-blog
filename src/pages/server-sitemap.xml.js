@@ -1,6 +1,6 @@
 import { getServerSideSitemap } from "next-sitemap";
 import {getAllSlugs, getAllCategories} from "lib/api"
-import {siteMeta} from "lib/contents"
+import siteMeta from "lib/contents"
 
 export default function Sitemap(){}
 
