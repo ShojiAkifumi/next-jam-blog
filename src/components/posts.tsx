@@ -25,7 +25,7 @@ const Posts = ({ posts }: postsProps) => {
         <article className={styles.post} key={slug}>
           <Link href={`/blog/${slug}`} scroll={false}>
             <a>
-              <figure>
+              {/* <figure>
                 <Image
                   src={eyecatch.url}
                   alt={title}
@@ -35,7 +35,7 @@ const Posts = ({ posts }: postsProps) => {
                   blurDataURL={eyecatch.plaiceholder}
                   sizes="(min-width: 1152px) 576px,50vw"
                 />
-              </figure>
+              </figure> */}
               <h2>{title}</h2>
             </a>
           </Link>
