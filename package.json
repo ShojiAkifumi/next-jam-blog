@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,6 +22,7 @@
     "html-to-text": "^8.2.1",
     "microcms-js-sdk": "^2.2.1",
     "next": "12.3.1",
+    "next-sitemap": "^3.1.24",
     "plaiceholder": "^2.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

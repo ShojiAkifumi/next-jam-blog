@@ -10,11 +10,11 @@ type Props = {
 const Container = ({ children, large = false }: Props) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 30 }}
+      exit={{ opacity: 0, y: 40 }}
       transition={{
-        duration: 0.5,
+        duration: 0.6,
       }}
     >
       <div className={large ? styles.large : styles.default}>{children}</div>
