@@ -24,7 +24,7 @@ export async function getAllSlugs(limit = 100) {
   try {
     const slugs = await client.get({
       endpoint: "blogs",
-      queries: { limit, fields: "title,slug", orders: "-publishDate" },
+      queries: { limit, fields: "title,slug,revisedAt", orders: "-publishDate" },
     });
     return slugs.contents;
   } catch (err) {

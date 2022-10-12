@@ -3,7 +3,7 @@ const siteMeta = {
   desc: "アウトプットしていくサイト",
   lang: "ja",
   locale: "ja_JP",
-  siteUrl: "localhost:3000",
+  siteUrl: "https://next-blog-orpin-eight.vercel.app",
   type: "website",
   icon: "/favicon.ico",
 };
