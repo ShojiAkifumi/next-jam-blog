@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: 'https://next-blog-orpin-eight.vercel.app',
+  siteUrl: process.env.SITE_URL || 'https://next-blog-orpin-eight.vercel.app',
   exclude:['/server-sitemap.xml'],
   generateRobotsTxt: true,
   robotsTxtOptions:{
