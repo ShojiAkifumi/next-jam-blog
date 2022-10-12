@@ -17,7 +17,7 @@ const Container = ({ children, large = false, isMain = false }: Props) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
           transition={{
-            duration: 30,
+            duration: 6,
           }}
         >
           {children}
