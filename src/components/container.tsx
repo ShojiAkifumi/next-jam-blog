@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "styles/container.module.scss";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -10,7 +9,7 @@ type Props = {
 
 const Container = ({ children, large = false, isMain = false }: Props) => {
   return (
-    <div className={large ? styles.large : styles.default}>
+    <div className={`container ${large ? "large" : "default"}`}>
       {isMain ? (
         <motion.div
           initial={{ opacity: 0, y: 15 }}

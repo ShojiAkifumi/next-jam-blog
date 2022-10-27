@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "styles/post-header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import ConvertDate from "./convertDate";
@@ -13,11 +12,11 @@ type Props = {
 
 const PostHeader = ({ title, subtitle, publish = "" }: Props) => {
   return (
-    <div className={styles.stack}>
-      <p className={styles.subtitle}>{subtitle}</p>
-      <h1 className={styles.title}>{title}</h1>
+    <div className="postHeaderStack">
+      <p className="subtitle">{subtitle}</p>
+      <h1 className="title">{title}</h1>
       {publish && (
-        <div className={styles.publish}>
+        <div className="publish">
           <FontAwesomeIcon icon={faClock} size="lg" color="var(--gray-25)" />
           <ConvertDate dateISO={publish} />
         </div>

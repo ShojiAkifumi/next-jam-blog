@@ -11,13 +11,13 @@ type Props = {
 
 const Hero = ({ title, subtitle, imageOn = false }: Props) => {
   return (
-    <div className={styles.flexContainer}>
-      <div className={styles.text}>
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.subtitle}>{subtitle}</p>
+    <div className="heroFlexContainer">
+      <div className="text">
+        <h1 className="title">{title}</h1>
+        <p className="subtitle">{subtitle}</p>
       </div>
       {imageOn && (
-        <figure className={styles.image}>
+        <figure className="image">
           <Image
             src={cube}
             alt=""

@@ -1,14 +1,13 @@
 import React from "react";
 import Logo from "./logo";
-import styles from "styles/footer.module.scss";
 import Container from "./container";
 import Social from "./social";
 
 const Footer = () => {
   return (
-    <footer className={styles.wrapper}>
+    <footer className="footerWrapper">
       <Container>
-        <div className={styles.flexContainer}>
+        <div className="flexContainer">
           <Logo />
           <Social iconSize="30px" />
         </div>

@@ -6,9 +6,9 @@ import Container from "./container";
 
 const Header = () => {
   return (
-    <header className={styles.siteHeader}>
+    <header className="siteHeader">
       <Container>
-        <div className={styles.flexContainer}>
+        <div className="flexContainer">
           <Logo boxOn />
           <Nav />
         </div>

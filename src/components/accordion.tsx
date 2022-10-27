@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import styles from "styles/accordion.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 type Props = {
@@ -15,15 +14,15 @@ const Accordion = ({ heading, children }: Props) => {
   };
 
   return (
-    <div className={isTextOpen ? styles.open : styles.close}>
-      <h3 className={styles.heading}>
+    <div className={`accordion ${isTextOpen ? "open" : "close"}`}>
+      <h3 className="heading">
         <button onClick={toggleText}>
           {heading}
-          <FontAwesomeIcon icon={faCircleChevronDown} className={styles.icon} />
+          <FontAwesomeIcon icon={faCircleChevronDown} className="icon" />
         </button>
       </h3>
-      <div className={styles.text}>
-        <div className={styles.textInner}>{children}</div>
+      <div className="text">
+        <div className="textInner">{children}</div>
       </div>
     </div>
   );
