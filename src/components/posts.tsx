@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import s from "styles/posts.module.scss";
 
 type eyecatchTypes = {
   url: string;
@@ -19,9 +20,9 @@ type postsProps = {
 
 const Posts = ({ posts }: postsProps) => {
   return (
-    <div className="postsGridContainer">
+    <div className={s.postsGridContainer}>
       {posts.map(({ title, slug, eyecatch }) => (
-        <article className="post" key={slug}>
+        <article className={s.post} key={slug}>
           <Link href={`/blog/${slug}`} scroll={false}>
             <a>
               <figure>
