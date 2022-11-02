@@ -1,12 +1,12 @@
 import React from "react";
 import parse, { HTMLReactParserOptions, Element } from "html-react-parser";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 type Props = {
-  contentHTNL: string;
+  contentHTML: string;
 };
 
-const ConvertBody = ({ contentHTNL }: Props) => {
+const ConvertBody = ({ contentHTML }: Props) => {
   const options: HTMLReactParserOptions = {
     replace: (node) => {
       if (node instanceof Element && node.attribs) {
@@ -16,8 +16,8 @@ const ConvertBody = ({ contentHTNL }: Props) => {
             <Image
               src={src}
               alt={alt}
-              width={width}
-              height={height}
+              width={Number(width)}
+              height={Number(height)}
               sizes="(min-width: 768) 768px, 100vw"
             />
           );
@@ -25,7 +25,7 @@ const ConvertBody = ({ contentHTNL }: Props) => {
       }
     },
   };
-  const contentReact = parse(contentHTNL, options);
+  const contentReact = parse(contentHTML, options);
   return <>{contentReact}</>;
 };
 

@@ -19,21 +19,17 @@ const Pagination = ({ prevText, prevUrl, nextText, nextUrl }: Props) => {
     <ul className={styles.flexContainer}>
       {prevText && prevUrl && (
         <li className={styles.prev}>
-          <Link href={prevUrl} scroll={false}>
-            <a className={styles.iconText}>
-              <FontAwesomeIcon icon={faChevronLeft} color="var(--gray-25)" />
-              <span>{prevText}</span>
-            </a>
+          <Link href={prevUrl} scroll={false} className={styles.iconText}>
+            <FontAwesomeIcon icon={faChevronLeft} color="var(--gray-25)" />
+            <span>{prevText}</span>
           </Link>
         </li>
       )}
       {nextText && nextUrl && (
         <li className={styles.next}>
-          <Link href={nextUrl} scroll={false}>
-            <a className={styles.iconText}>
-              <span>{nextText}</span>
-              <FontAwesomeIcon icon={faChevronRight} color="var(--gray-25)" />
-            </a>
+          <Link href={nextUrl} scroll={false} className={styles.iconText}>
+            <span>{nextText}</span>
+            <FontAwesomeIcon icon={faChevronRight} color="var(--gray-25)" />
           </Link>
         </li>
       )}

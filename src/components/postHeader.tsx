@@ -7,14 +7,12 @@ import s from "styles/post-header.module.scss";
 
 type Props = {
   title: string;
-  subtitle: string;
   publish?: string;
 };
 
-const PostHeader = ({ title, subtitle, publish = "" }: Props) => {
+const PostHeader = ({ title, publish = "" }: Props) => {
   return (
     <div className={s.postHeaderStack}>
-      <p className={s.subtitle}>{subtitle}</p>
       <h1 className={s.title}>{title}</h1>
       {publish && (
         <div className={s.publish}>

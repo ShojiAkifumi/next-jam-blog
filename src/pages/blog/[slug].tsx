@@ -4,7 +4,7 @@ import { ParsedUrlQuery } from "querystring";
 import { getPostBySlug, getAllSlugs } from "lib/api";
 import Container from "components/container";
 import PostHeader from "components/postHeader";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import TwoColumn from "components/twoColumn";
 import PostBody from "components/postBody";
 import ConvertBody from "components/convertBody";
@@ -26,8 +26,8 @@ type slugProp = {
 
 type eyecatchTypes = {
   url: string;
-  width: string;
-  height: string;
+  width: number;
+  height: number;
   plaiceholder: string;
 };
 
@@ -63,11 +63,6 @@ const Post = ({
       <article>
         <TwoColumn>
           <TwoColumn.main>
-            <PostHeader
-              title={title}
-              subtitle="blog Article"
-              publish={publish}
-            />
             <figure>
               <Image
                 key={eyecatch.url}
@@ -82,8 +77,9 @@ const Post = ({
                 blurDataURL={eyecatch.plaiceholder}
               />
             </figure>
+            <PostHeader title={title} publish={publish} />
             <PostBody>
-              <ConvertBody contentHTNL={content} />
+              <ConvertBody contentHTML={content} />
             </PostBody>
           </TwoColumn.main>
           <TwoColumn.sidebar>

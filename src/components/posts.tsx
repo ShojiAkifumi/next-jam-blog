@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import s from "styles/posts.module.scss";
 
 type eyecatchTypes = {
@@ -24,21 +24,23 @@ const Posts = ({ posts }: postsProps) => {
       {posts.map(({ title, slug, eyecatch }) => (
         <article className={s.post} key={slug}>
           <Link href={`/blog/${slug}`} scroll={false}>
-            <a>
-              <figure>
-                <Image
-                  src={eyecatch.url}
-                  alt={title}
-                  layout="fill"
-                  objectFit="cover"
-                  placeholder="blur"
-                  blurDataURL={eyecatch.plaiceholder}
-                  sizes="(min-width: 1152px) 576px,50vw"
-                />
-              </figure>
-              <h2>{title}</h2>
-            </a>
+            <figure>
+              <Image
+                src={eyecatch.url}
+                alt={title}
+                layout="fill"
+                objectFit="cover"
+                placeholder="blur"
+                blurDataURL={eyecatch.plaiceholder}
+                sizes="(min-width: 1152px) 576px,50vw"
+              />
+            </figure>
           </Link>
+          <div>
+            <Link href={`/blog/${slug}`} scroll={false}>
+              <h2>{title}</h2>
+            </Link>
+          </div>
         </article>
       ))}
     </div>

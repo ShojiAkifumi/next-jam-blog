@@ -14,12 +14,13 @@ const PostCategories = ({ categories }: Props) => {
       <h3 className={styles.heading}>
         <FontAwesomeIcon icon={faFolderOpen} />
         <span className="sr-only">Categories</span>
+        <small>カテゴリー</small>
       </h3>
       <ul className={styles.list}>
         {categories.map(({ name, slug }) => (
           <li key={slug}>
             <Link href={`/blog/category/${slug}`} scroll={false}>
-              <a>{name}</a>
+              {name}
             </Link>
           </li>
         ))}

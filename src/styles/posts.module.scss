@@ -2,18 +2,23 @@
   margin-top: var(--space-md);
   margin-bottom: var(--space-lg);
   .post {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
     h2 {
       margin-top: 0.5em;
       font-size: var(--small-heading3);
       font-weight: 400;
     }
+    > a {
+      width: 300px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
     figure {
       position: relative;
       aspect-ratio: 16/9;
-    }
-    transition: 0.3s;
-    &:hover {
-      opacity: 0.8;
     }
   }
 }

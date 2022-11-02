@@ -37,7 +37,7 @@ const Category = ({ name, posts, categories }: Props) => {
   return (
     <Container isMain>
       <HeadMeta pageTitle={name} pageDesc={`${name}に関する記事`} />
-      <PostHeader title={name} subtitle="カテゴリー" />
+      <PostHeader title={name} />
       <TwoColumn>
         <TwoColumn.main>
           <Posts posts={posts} />

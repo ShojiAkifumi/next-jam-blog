@@ -8,8 +8,8 @@ type logoProps = {
 
 const Logo = ({ boxOn }: logoProps) => {
   return (
-    <Link href="/" scroll={false}>
-      <a className={boxOn ? styles.box : styles.basic}>CUBE</a>
+    <Link href="/" scroll={false} className={boxOn ? styles.box : styles.basic}>
+      CUBE
     </Link>
   );
 };

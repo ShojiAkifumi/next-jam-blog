@@ -4,7 +4,7 @@ import Hero from "components/hero";
 import PostBody from "components/postBody";
 import TwoColumn from "components/twoColumn";
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import eyecatch from "../../public/about.jpg";
 import HeadMeta from "components/meta";
 import Accordion from "components/accordion";
