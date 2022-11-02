@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     <>
       <GoogleAnalytics />
       <Layout>
-        <AnimatePresence exitBeforeEnter onExitComplete={transitionCallback}>
+        <AnimatePresence exitBeforeEnter>
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>
       </Layout>
