@@ -7,11 +7,10 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import { usePageView, GoogleAnalytics } from "lib/gtag";
 import { AnimatePresence } from "framer-motion";
 import Router from "next/router";
-import { useTransitionFix } from "./utils/useTransitionFix";
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  const transitionCallback = useTransitionFix();
+
   usePageView();
   return (
     <>
