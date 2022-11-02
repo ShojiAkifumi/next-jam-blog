@@ -34,7 +34,7 @@ const Blog = ({ posts }: postsProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts();
+  const posts = await getAllPosts(10);
 
   for (const post of posts) {
     if (!post.hasOwnProperty("eyecatch")) {

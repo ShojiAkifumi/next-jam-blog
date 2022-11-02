@@ -10,7 +10,7 @@ type Props = {
 
 const Container = ({ children, large = false, isMain = false }: Props) => {
   return (
-    <div className={`${s.container} ${large ? s.large : s.default}`}>
+    <div className={`${large ? s.large : s.default}`}>
       {isMain ? (
         <motion.div
           initial={{ opacity: 0, y: 15 }}

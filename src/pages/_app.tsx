@@ -10,13 +10,15 @@ import Router from "next/router";
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-
   usePageView();
   return (
     <>
       <GoogleAnalytics />
       <Layout>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence
+          exitBeforeEnter
+          onExitComplete={() => window.scrollTo(0, 0)}
+        >
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>
       </Layout>

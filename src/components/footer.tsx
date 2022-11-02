@@ -6,9 +6,9 @@ import s from "styles/footer.module.scss";
 
 const Footer = () => {
   return (
-    <footer className={s.footerWrappe}>
+    <footer className={s.footerWrapper}>
       <Container>
-        <div className={s.flexContaine}>
+        <div className={s.flexContainer}>
           <Logo />
           <Social iconSize="30px" />
         </div>

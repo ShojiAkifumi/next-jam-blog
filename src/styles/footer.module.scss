@@ -1,8 +1,8 @@
 .footerWrapper {
   padding: var(--space-xl) 0;
   background-color: var(--gray-10);
-  .flexContainer {
-    composes: sideBySideCenter from "./utils.module.scss";
-    gap: 2em;
-  }
+}
+.flexContainer {
+  composes: sideBySideCenter from "./utils.module.scss";
+  gap: 2em;
 }
