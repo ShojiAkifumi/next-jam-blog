@@ -1,0 +1,19 @@
+// .container {}
+.heading {
+    font-weight: normal;
+    font-size: var(--small-heading3);
+    border-bottom: solid 1px var(--accent);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.list {
+    li {
+        transition: 0.3s;
+        border-bottom: solid 1px #0002;
+        padding: 0.5rem 0.5rem;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

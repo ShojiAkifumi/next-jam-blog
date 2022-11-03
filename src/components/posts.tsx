@@ -20,7 +20,7 @@ type postsProps = {
 
 const Posts = ({ posts }: postsProps) => {
   return (
-    <div className={s.postsGridContainer}>
+    <div className={s.postsContainer}>
       {posts.map(({ title, slug, eyecatch }) => (
         <article className={s.post} key={slug}>
           <Link href={`/blog/${slug}`} scroll={false}>
@@ -36,7 +36,7 @@ const Posts = ({ posts }: postsProps) => {
               />
             </figure>
           </Link>
-          <div>
+          <div className={s.content}>
             <Link href={`/blog/${slug}`} scroll={false}>
               <h2>{title}</h2>
             </Link>

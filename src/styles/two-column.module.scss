@@ -1,24 +1,21 @@
 .flexContainer {
-  composes: sideBySide from "./utils.module.scss";
-  gap: var(--space-md);
-  margin: 20px 0 40px;
+    composes: sideBySide from "./utils.module.scss";
+    gap: var(--space-md);
+    margin: 20px 0 40px;
 }
 
 .main {
-  padding: 0 32px 60px;
-  background-color: #fff;
-  border-radius: 5px;
-  max-width: 850px;
+    padding: 0 32px 60px;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 850px;
 }
+
 @media (min-width: 768px) {
-  .sidebar {
-    width: 240px;
-    position: sticky;
-    top: 40px;
-    align-self: flex-start;
-    :is(div, ul) {
-      width: fit-content;
-      margin-left: auto;
+    .sidebar {
+        width: 240px;
+        position: sticky;
+        top: 40px;
+        align-self: flex-start;
     }
-  }
 }

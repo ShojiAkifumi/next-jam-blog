@@ -1,6 +1,6 @@
 import Container from "components/container";
 import HeadMeta from "components/meta";
-import PostCategories from "components/postCategories";
+import SidebarContent from "components/sidebarContent";
 import PostHeader from "components/postHeader";
 import Posts from "components/posts";
 import TwoColumn from "components/twoColumn";
@@ -43,7 +43,7 @@ const Category = ({ name, posts, categories }: Props) => {
           <Posts posts={posts} />
         </TwoColumn.main>
         <TwoColumn.sidebar>
-          <PostCategories categories={categories} />
+          <SidebarContent heading="カテゴリー" categories={categories} />
         </TwoColumn.sidebar>
       </TwoColumn>
     </Container>

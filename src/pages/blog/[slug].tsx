@@ -8,7 +8,7 @@ import Image from "next/legacy/image";
 import TwoColumn from "components/twoColumn";
 import PostBody from "components/postBody";
 import ConvertBody from "components/convertBody";
-import PostCategories from "components/postCategories";
+import SidebarContent from "components/sidebarContent";
 import { extractText } from "lib/extractText";
 import HeadMeta from "components/meta";
 import { eyecatchLocal } from "lib/contents";
@@ -83,7 +83,7 @@ const Post = ({
             </PostBody>
           </TwoColumn.main>
           <TwoColumn.sidebar>
-            <PostCategories categories={categories} />
+            <SidebarContent heading="カテゴリー" categories={categories} />
           </TwoColumn.sidebar>
         </TwoColumn>
         <Pagination

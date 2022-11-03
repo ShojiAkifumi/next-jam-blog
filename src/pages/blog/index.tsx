@@ -7,7 +7,7 @@ import React from "react";
 import { eyecatchLocal } from "lib/contents";
 import { getPlaiceholder } from "plaiceholder";
 import TwoColumn from "components/twoColumn";
-import PostCategories from "components/postCategories";
+import SidebarContent from "components/sidebarContent";
 import { getAllCategories } from "lib/api";
 
 type eyecatchTypes = {
@@ -41,7 +41,7 @@ const Blog = ({ posts, categories }: postsProps) => {
           <Posts posts={posts} />
         </TwoColumn.main>
         <TwoColumn.sidebar>
-          <PostCategories categories={categories} />
+          <SidebarContent heading="カテゴリー" categories={categories} />
         </TwoColumn.sidebar>
       </TwoColumn>
     </Container>
